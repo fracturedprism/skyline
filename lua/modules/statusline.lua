@@ -44,16 +44,16 @@ local space = ' '
 ------------------------------------------------------------------------
 
 -- Different colors for mode
-local purple = '#BF616A' --#B48EAD
-local blue = '#83a598' --#81A1C1
-local yellow = '#fabd2f' --#EBCB8B
-local green = '#8ec07c' --#A3BE8C
-local red = '#fb4934' --#BF616A
+local purple = '#c4a7e7' --#B48EAD
+local blue = '#9ccfd8' --#81A1C1
+local yellow = '#f6c177' --#EBCB8B
+local green = '#3e8fb0' --#A3BE8C
+local red = '#eb6f92' --#BF616A
 
 -- fg and bg
-local white_fg = '#b8b894'
-local black_fg = '#282c34'
-local mybg = '#504945'
+local white_fg = '#e0def4'
+local black_fg = '#faf4ed'
+local mybg = '#232136'
 
 --Statusline colour
 local statusline_bg = 'None' --> Set to none, use native bg
@@ -106,7 +106,7 @@ function M.activeLine()
 	-- Component: Mode
 	local mode = api.nvim_get_mode()['mode']
 	set_mode_colours(mode)
-	statusline = statusline .. '%#ModeSeparator#' .. space
+	statusline = statusline .. '%#ModeSeparator#'
 	statusline = statusline
 		.. '%#ModeSeparator#'
 		.. left_separator
