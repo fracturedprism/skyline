@@ -110,9 +110,9 @@ function M.activeLine()
 	statusline = statusline
 		.. '%#ModeSeparator#'
 		.. left_separator
-		.. '%#Mode# '
+		.. '%#Mode#'
 		.. modes.current_mode[mode]
-		.. ' %#ModeSeparator#'
+		.. '%#ModeSeparator#'
 		.. right_separator
 		.. space
 	-- Component: Filetype and icons
@@ -146,7 +146,7 @@ function M.activeLine()
 
 	-- Component: Modified, Read-Only, Filesize, Row/Col
 	statusline = statusline .. '%#Status_Line#' .. bufmod.is_buffer_modified()
-	statusline = statusline .. editable.editable() .. filesize.get_file_size() .. [[L %l/%L c %c]] .. space
+	statusline = statusline .. editable.editable() .. filesize.get_file_size() .. [[l %l/%L c %c]] .. space
 	cmd('set noruler') --disable line numbers in bottom right for our custom indicator as above
 	return statusline
 end
