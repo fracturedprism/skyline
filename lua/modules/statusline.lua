@@ -44,15 +44,15 @@ local space = ' '
 ------------------------------------------------------------------------
 
 -- Different colors for mode
-local purple = '#c4a7e7' --#B48EAD
-local blue = '#9ccfd8' --#81A1C1
-local yellow = '#f6c177' --#EBCB8B
-local green = '#3e8fb0' --#A3BE8C
+local purple = '#907aa9' --#B48EAD
+local blue = '#56949f' --#81A1C1
+local yellow = '#ea9a97' --#EBCB8B
+local green = '#d7827e' --#A3BE8C
 local red = '#eb6f92' --#BF616A
 
 -- fg and bg
-local white_fg = '#e0def4'
-local black_fg = '#faf4ed'
+local white_fg = '#908caa'
+local black_fg = '#e0def4'
 local mybg = '#232136'
 
 --Statusline colour
