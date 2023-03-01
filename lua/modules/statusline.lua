@@ -116,22 +116,13 @@ function M.activeLine()
 		.. right_separator
 		.. space
 	-- Component: Filetype and icons
-	statusline = statusline .. '%#Status_Line#' .. bufname.get_buffer_name()
 	statusline = statusline .. buficon.get_file_icon()
-
-	-- Component: errors and warnings -> requires ALE
-	-- TODO: [beauwilliams] --> IMPLEMENT A LUA VERSION OF BELOW VIMSCRIPT FUNCS
-	if diag_ale then
-		statusline = statusline .. call('LinterStatus')
-	end
+	statusline = statusline .. '%#Status_Line#' .. bufname.get_buffer_name()
 
 	-- Component: Native Nvim LSP Diagnostic
 	if diag_lsp then
 		statusline = statusline .. lsp.diagnostics()
 	end
-
-	-- TODO: SUPPORT COC LATER, NEEDS TESTING WITH COC USERS FIRST
-	-- statusline = statusline..M.cocStatus()
 
 	-- Component: git commit stats -> REQUIRES SIGNIFY
 	statusline = statusline .. signify.signify()
@@ -153,12 +144,9 @@ function M.activeLine()
 	statusline = statusline .. '%#Statusline_LSP_Func# ' .. lsp.current_function()
 
 
-	-- Scrollbar
-	-- statusline = statusline.."%#Status_Line#"..call('Scrollbar')..space
-
 	-- Component: Modified, Read-Only, Filesize, Row/Col
 	statusline = statusline .. '%#Status_Line#' .. bufmod.is_buffer_modified()
-	statusline = statusline .. editable.editable() .. filesize.get_file_size() .. [[ʟ %l/%L c %c]] .. space
+	statusline = statusline .. editable.editable() .. filesize.get_file_size() .. [[L %l/%L c %c]] .. space
 	cmd('set noruler') --disable line numbers in bottom right for our custom indicator as above
 	return statusline
 end

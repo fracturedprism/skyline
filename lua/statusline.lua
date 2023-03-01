@@ -14,8 +14,6 @@ local statusline = require('modules.statusline')
 local M = {}
 M.tabline = true -- Default to true
 M.lsp_diagnostics = true -- Enable Nvim native LSP as default
-M.ale_diagnostics = false -- Disable Ale by default
-
 ------------------------------------------------------------------------
 --                              Init                            --
 ------------------------------------------------------------------------
@@ -30,8 +28,6 @@ end
 function M.activeLine()
 	if M.lsp_diagnostics == true then
 		vim.wo.statusline = "%!v:lua.require'modules.statusline'.wants_lsp()"
-	elseif M.ale_diagnostics == true then
-		vim.wo.statusline = "%!v:lua.require'modules.statusline'.wants_ale()"
 	else
 		vim.wo.statusline = "%!v:lua.require'modules.statusline'.activeLine()"
 	end

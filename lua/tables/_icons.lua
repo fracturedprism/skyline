@@ -110,6 +110,7 @@ local extensionTable = {
 	['pl'] = '',
 	['pm'] = '',
 	['t'] = '',
+	['txt'] = ' '
 	['rss'] = '',
 	['f#'] = '',
 	['fsscript'] = '',
