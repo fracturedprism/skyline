@@ -156,11 +156,6 @@ function M.wants_lsp()
 	return M.activeLine(diag_lsp)
 end
 
-function M.wants_ale()
-	diag_ale = true
-	return M.activeLine(diag_ale)
-end
-
 -- statusline for simple buffers such as NvimTree where you don't need mode indicators etc
 function M.simpleLine()
 	local statusline = ''
