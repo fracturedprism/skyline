@@ -43,10 +43,10 @@ end
 
 local set_colours = function()
 	--SET TABLINE COLOURS
-	cmd('hi TabLineSel gui=Bold guibg=#8ec07c guifg=#292929')
-	cmd('hi TabLineSelSeparator gui=bold guifg=#8ec07c')
-	cmd('hi TabLine guibg=#504945 guifg=#b8b894 gui=None')
-	cmd('hi TabLineSeparator guifg=#504945')
+	cmd('hi TabLineSel gui=Bold guibg=#2a273f guifg=#575279')
+	cmd('hi TabLineSelSeparator gui=bold guifg=#2a273f')
+	cmd('hi TabLine guibg=#232136 guifg=#575279 gui=None')
+	cmd('hi TabLineSeparator guifg=#232136')
 	cmd('hi TabLineFill guibg=None gui=None')
 end
 
@@ -77,7 +77,6 @@ function M.init()
 		.. TrimmedDirectory(dir)
 		.. '%#TabLineSeparator#'
 		.. right_separator
-	tabline = tabline .. space
 	return tabline
 end
 
