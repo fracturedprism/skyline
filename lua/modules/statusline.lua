@@ -120,8 +120,8 @@ function M.activeLine()
 		.. right_separator
 		.. space
 	-- Component: Filetype and icons
-	statusline = statusline .. buficon.get_file_icon()
-	statusline = statusline .. '%#Status_Line#' .. bufname.get_buffer_name()
+	statusline = statusline .. '%#Status_Line#' .. buficon.get_file_icon()
+	statusline = statusline .. bufname.get_buffer_name()
 
 	-- Component: Native Nvim LSP Diagnostic
 	if diag_lsp then
