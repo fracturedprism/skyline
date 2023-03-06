@@ -81,6 +81,10 @@ local set_mode_colours = function(mode)
 		cmd('hi Mode guibg=' .. red .. ' guifg=' .. black_fg .. ' gui=bold')
 		cmd('hi ModeSeparator guifg=' .. red)
 	end
+	if mode == 'R' then
+		cmd('hi Mode guibg=' .. red .. ' guifg=' .. black_fg .. ' gui=bold')
+		cmd('hi ModeSeparator guifg='.. red)
+	end
 end
 
 
@@ -106,7 +110,7 @@ function M.activeLine()
 	-- Component: Mode
 	local mode = api.nvim_get_mode()['mode']
 	set_mode_colours(mode)
-	statusline = statusline .. '%#ModeSeparator#'
+	-- statusline = statusline .. '%#ModeSeparator#'
 	statusline = statusline
 		.. '%#ModeSeparator#'
 		.. left_separator
