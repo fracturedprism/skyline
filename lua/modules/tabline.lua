@@ -43,8 +43,8 @@ end
 
 local set_colours = function()
 	--SET TABLINE COLOURS
-	cmd('hi TabLineSel gui=Bold guibg=#ea9a97 guifg=#e0def4')
-	cmd('hi TabLineSelSeparator gui=bold guifg=#ea9a97')
+	cmd('hi TabLineSel gui=Bold guibg=#d7827e guifg=#e0def4')
+	cmd('hi TabLineSelSeparator gui=bold guifg=#d7827e')
 	cmd('hi TabLine guibg=#232136 guifg=#575279 gui=None')
 	cmd('hi TabLineSeparator guifg=#232136')
 	cmd('hi TabLineFill guibg=None gui=None')
