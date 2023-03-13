@@ -46,7 +46,11 @@ local set_colours = function()
 	cmd('hi TabLineSel gui=Bold guibg=#d7827e guifg=#e0def4')
 	cmd('hi TabLineSelSeparator gui=bold guifg=#d7827e')
 	cmd('hi TabLine guibg=#232136 guifg=#575279 gui=None')
-	cmd('hi TabLineSeparator guifg=#232136')
+	if vim.opt.background:get() == 'dark' then
+		cmd('hi TabLineSeparator guifg=#232136')
+	else
+		cmd('hi TabLineSeperator guifg=#f5f4ed')
+	end
 	cmd('hi TabLineFill guibg=None gui=None')
 end
 
